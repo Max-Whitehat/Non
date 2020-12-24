@@ -39,11 +39,11 @@ function setup(){
 
 
 
-    bird = new Bird(100,100);
+    bird = new Bird(200,50);
     
    
 
-    slingshot1 = new Slingshot(bird.body,{x:200,y:100});
+    slingshot1 = new Slingshot(bird.body,{x:200,y:50});
     
     
 
@@ -88,3 +88,6 @@ function mouseDragged(){
 function mouseReleased(){
     slingshot1.fly();
 }
+
+
+
