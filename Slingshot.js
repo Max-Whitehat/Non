@@ -66,5 +66,9 @@ class Slingshot {
         this.Slingshot.bodyA = null
     }
 
+    attach(body){
+        this.Slingshot.bodyA = body
+    }
+
 }
 
