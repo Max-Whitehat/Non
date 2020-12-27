@@ -6,6 +6,43 @@ var engine, world;
 var box1, pig1;
 var backgroundImg,platform
 
+//string
+/*var name="Max";
+console.log(name);
+
+//number
+var postalno =10086
+
+
+//false or true    : Boolean Value
+
+//var sing= false;
+
+
+//var mobileno = null;
+
+//var drivinglicense;
+
+//var students = ['Max' , 'Pari' , 'Joe']
+
+//var MaxDetais = ['Max', 10086 , false];
+
+
+
+//var studentsdetails = [["Max",10086,false],["Pari",41263,true]]
+
+
+var Joedetails =["Joe",11222,true];
+
+studentsdetails.push(Joedetails)
+
+
+
+studentsdetails.pop();
+
+console.log(studentsdetails);
+*/
+
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
 }
