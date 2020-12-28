@@ -44,7 +44,10 @@ console.log(studentsdetails);
 */
 
 function preload() {
-    backgroundImg = loadImage("sprites/bg.png");
+  //  backgroundImg = loadImage("sprites/bg.png");
+    getTime();
+    
+
 }
 
 function setup(){
@@ -87,7 +90,11 @@ function setup(){
 }
 
 function draw(){
+    
+    if(backgroundImg){
     background(backgroundImg);
+    }
+
     Engine.update(engine);
 
     box1.display();
@@ -132,3 +139,20 @@ function keyPressed() {
 }
 
 
+
+async function getTime(){
+   var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Shanghai");
+    var jsondata = await response.json();
+
+    var datetime = jsondata.datetime;
+    var hour = datetime.slice(11,13);
+
+    if(hour>=6 && hour<=19){
+        bg = "sprites/bg.png"
+    } else{
+        bg = "sprites/bg2.png"
+    }
+
+        backgroundImg = loadImage(bg)
+  
+}
