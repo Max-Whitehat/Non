@@ -2,9 +2,13 @@ const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
 
+
+var score = 0
 var engine, world;
 var box1, pig1;
 var backgroundImg,platform
+
+
 
 //string
 /*var name="Max";
@@ -90,7 +94,10 @@ function setup(){
 }
 
 function draw(){
-    
+
+
+    text("score"+score,1100,100)
+
     if(backgroundImg){
     background(backgroundImg);
     }
@@ -135,6 +142,7 @@ function mouseReleased(){
 function keyPressed() {
     if (keyCode === 32) {
       slingshot1.attach(bird.body);
+      bird.trajectory = []
     } 
 }
 
@@ -154,5 +162,10 @@ async function getTime(){
     }
 
         backgroundImg = loadImage(bg)
-  
+        
 }
+
+
+
+
+

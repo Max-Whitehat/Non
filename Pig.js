@@ -11,6 +11,9 @@ class Pig extends BaseClass {
         super.display();
     }else{
       push();
+    if(this.visibility>-50){
+  score=score+1
+}
       World.remove(world,this.body)
       tint(255, this.visibility); 
       image(this.image,this.body.position.x,this.body.position.y,50,50)
@@ -19,7 +22,6 @@ class Pig extends BaseClass {
     }
   }
 };
-
 
 
 
